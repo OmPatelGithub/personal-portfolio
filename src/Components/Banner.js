@@ -4,6 +4,8 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import RotatingImage  from "./RotatingImage";
+import RotatingGrid from "./RotatingGrid";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -67,12 +69,10 @@ export const Banner = () => {
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
-            </TrackVisibility>
+            <div className="rotating-image-container">
+            <RotatingImage src={headerImg} alt="header-img" />
+            </div>
+
           </Col>
         </Row>
       </Container>

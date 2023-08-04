@@ -1,107 +1,11 @@
-// import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-// import { ProjectCard } from "./ProjectCard";
-// import projImg1 from "../assets/img/project-img1.png";
-// import projImg2 from "../assets/img/project-img2.png";
-// import projImg3 from "../assets/img/project-img3.png";
-// import colorSharp2 from "../assets/img/color-sharp2.png";
-// import 'animate.css';
-// import TrackVisibility from 'react-on-screen';
-
-// export const Projects = () => {
-
-//   const projects = [
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg1,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg2,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg3,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg1,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg2,
-//     },
-//     {
-//       title: "Business Startup",
-//       description: "Design & Development",
-//       imgUrl: projImg3,
-//     },
-//   ];
-
-//   return (
-//     <section className="project" id="project">
-//       <Container>
-//         <Row>
-//           <Col size={12}>
-//             <TrackVisibility>
-//               {({ isVisible }) =>
-//               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-//                 <h2>Projects</h2>
-//                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-//                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-//                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-//                     <Nav.Item>
-//                       <Nav.Link eventKey="first">Tab 1</Nav.Link>
-//                     </Nav.Item>
-//                     <Nav.Item>
-//                       <Nav.Link eventKey="second">Tab 2</Nav.Link>
-//                     </Nav.Item>
-//                     <Nav.Item>
-//                       <Nav.Link eventKey="third">Tab 3</Nav.Link>
-//                     </Nav.Item>
-//                   </Nav>
-//                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-//                     <Tab.Pane eventKey="first">
-//                       <Row>
-//                         {
-//                           projects.map((project, index) => {
-//                             return (
-//                               <ProjectCard
-//                                 key={index}
-//                                 {...project}
-//                                 />
-//                             )
-//                           })
-//                         }
-//                       </Row>
-//                     </Tab.Pane>
-//                     <Tab.Pane eventKey="section">
-//                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-//                     </Tab.Pane>
-//                     <Tab.Pane eventKey="third">
-//                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-//                     </Tab.Pane>
-//                   </Tab.Content>
-//                 </Tab.Container>
-//               </div>}
-//             </TrackVisibility>
-//           </Col>
-//         </Row>
-//       </Container>
-//       <img className="background-image-right" src={colorSharp2}></img>
-//     </section>
-//   )
-// }
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import StockMarket from "../assets/img/Stock Market.png"
+import AIWheel from "../assets/img/AIwheel.png"
+import Canam from "../assets/img/Canam.png"
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -110,18 +14,18 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Project 1",
-      description: "Description for Project 1",
-      imgUrl: projImg1,
+      title: "AI Powered Steering Wheel",
+      description: "If you've ever wanted to have your very own racing setup right on your laptop, look no further. It won't quite replace a physical wheel but it's close enough and also really fun! This project was made with Python and Google's ML library MediaPipe. Wanna see whats happenning under the hood? Check out my github! A demo is also available on LinkedIn!",
+      imgUrl: AIWheel,
     },
     {
-      title: "Project 2",
+      title: "Canam Groupe ERP System",
       description: "Description for Project 2",
-      imgUrl: projImg2,
+      imgUrl: Canam,
     },
     {
-      title: "Project 3",
-      description: "Description for Project 3",
+      title: "AI Powered Options Scanner",
+      description: "testAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options Scanner",
       imgUrl: StockMarket,
     },
   ];
@@ -135,7 +39,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Technical Projects</h2>
-                <p>Below is a collection of my personal projects, an assortment of passion-driven endeavors that encompass innovative web applications, ERP (enterprise resource planning) systems and cutting-edge machine learning models, reflecting my journey as a versatile developer and designer.</p>
+                <p>Here is a collection of some of my favorite personal projects. It's an assortment of passion-driven endeavors that encompass innovative web applications, ERP (enterprise resource planning) systems and cutting-edge machine learning models, reflecting my journey as a versatile developer and designer.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
