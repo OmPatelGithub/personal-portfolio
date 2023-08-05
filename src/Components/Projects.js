@@ -25,7 +25,7 @@ export const Projects = () => {
     },
     {
       title: "AI Powered Options Scanner",
-      description: "testAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options ScannerAI Powered Options Scanner",
+      description: "Through the use of recurrent neural networks mapped to the OLHC (open, low, high, close) data of a stock, different option metrics, and advanced statistical modeling I was able to create a model that suggests the best options to buy for a given stock for different trading strategies and risk tolerances. On highly liquid options like those for $SPY, this model has a win rate of 78%. Keep in mind this should be used as a tool within a larger trading strategy and might deliver unwanted results in highly volatile and news-driven environments. This project was made with Python and PyTorch.",
       imgUrl: StockMarket,
     },
   ];
