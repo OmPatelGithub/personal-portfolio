@@ -44,11 +44,11 @@ const RotatingImage = ({ src, alt }) => {
             width: "500px",
             height: "500px",
             padding: "20px",
-            marginLeft: "auto + 5000px", // move to the right
-            marginBottom: "auto + 100px",
+            marginLeft: "auto",
+            marginBottom: "auto + 500px",
             // move to the right
             transformStyle: "preserve-3d",
-            transition: "transform 200ms linear",
+            transition: "transform 300ms ease-out",
           }}
         >
 
@@ -62,50 +62,35 @@ const RotatingImage = ({ src, alt }) => {
               left: 0,
               right: 0,
               bottom: 0,
-              background: "linear-gradient(-45deg, red, blue)",
-              transform: "translateZ(-150px)", /* Move the gradient behind the image */
+              
+              transform: "translateZ(-150px) scale(1)", /* Move the gradient behind the image */
               borderRadius: "50%", /* Make the gradient background look like a circle */
             }}
           />
 
-        <div
-            className="shadow"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: "url(src/assets/img/frosted_background.avif)",
-              transform: "translateZ(-125px) scale(0.9)", /* Move the gradient behind the image */
-              backdropFilter: "blur(50px)", /* Add a blur effect */
-              borderRadius: "50%", /* Make the gradient background look like a circle */
-              opacity: 0.7,
 
-            }}
-          />
 
             <div
-            className="shadow"
+            className="frosted"
             style={{
               position: "absolute",
               top: 0,
               left: 0,
               right: 0,
               bottom: 0,
-              background: "url(src/assets/img/frosted_background.avif)",
-              transform: "translateZ(-100px) scale(0.8)", /* Move the gradient behind the image */
-              backdropFilter: "blur(90px)", /* Add a blur effect */
+              transform: "translateZ(-100px) scale(1.1)", /* Move the gradient behind the image */
+             
               borderRadius: "50%", /* Make the gradient background look like a circle */
-              opacity: 0.7,
 
             }}
-          />        
+          />    
+
+             
 
     
 
     
-          {/* Image */}
+
           <img
             src={src}
             alt={alt}

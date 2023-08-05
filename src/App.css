@@ -773,9 +773,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   left: 0;
   right: 0;
   bottom: 0;
-  backdrop-filter: blur(200px);
-  background: linear-gradient(-45deg, red, blue);
+  backdrop-filter: blur(20px);
+  background: linear-gradient(-45deg, rgb(230, 11, 135), rgb(51, 0, 255));
   border-radius: 50%; /* Make the gradient background look like a circle */
+
+  
 }
 
 .rotating-image-container .shadow {
@@ -784,8 +786,37 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(-45deg, red, blue);
-  backdrop-filter: blur(20px); /* Add a blur effect */
+  background: radial-gradient(
+    circle at center,
+    rgb(0, 0, 0) 20%, /* Start with black at 0% */
+    rgba(0, 0, 0, 0) 10% /* Transition to semi-transparent white at 70% */
+  );
+  opacity: 0.3;
+  inset: 0.75rem;
+  backdrop-filter: blur(1500px); /* Add a blur effect */
+  border-radius: 50%; /* Make the gradient background look like a circle */
+  margin-left: auto;
+}
+
+.rotating-image-container .frosted {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+  
+  
+  background-position: center;
+  background-size: 160%;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.932) 10%, /* Start with black at 0% */
+      rgba(255, 255, 255, 0.311) 60% /* Transition to semi-transparent white at 70% */
+    );
+  
+  backdrop-filter: blur(50px); /* Add a blur effect */
   border-radius: 50%; /* Make the gradient background look like a circle */
   margin-left: auto;
 }
