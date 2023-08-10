@@ -20,12 +20,12 @@ export const Projects = () => {
     },
     {
       title: "Canam Groupe ERP System",
-      description: "Description for Project 2",
+      description: "Canam Groupe is a company that specializes in manufacturing steel components. My team and I developed a full ERP system for them that manages their production of steel joists and keeps track of existing inventory which lead to a monthly savings of $46,000. We also developed a 3D simulation using Unity's game engine to visualize their yard and production process. This project was made with C#, Unity, SQL, and C++.", 
       imgUrl: Canam,
     },
     {
       title: "AI Powered Options Scanner",
-      description: "Through the use of recurrent neural networks mapped to the OLHC (open, low, high, close) data of a stock, different option metrics, and advanced statistical modeling I was able to create a model that suggests the best options to buy for a given stock for different trading strategies and risk tolerances. On highly liquid options like those for $SPY, this model has a win rate of 78%. Keep in mind this should be used as a tool within a larger trading strategy and might deliver unwanted results in highly volatile and news-driven environments. This project was made with Python and PyTorch.",
+      description: "Through the use of recurrent neural networks trained on the OLHC (open, low, high, close) data of a stock and different option metrics along with advanced statistical modeling, I was able to create a model that suggests the best options to buy for a given stock for different trading strategies and risk tolerances. On highly liquid options like those for $SPY, this model has a win rate of 78%. Keep in mind this should be used as a tool within a larger trading strategy and might deliver unwanted results in highly volatile and news-driven environments. This project was made with Python and PyTorch.",
       imgUrl: StockMarket,
     },
   ];

@@ -95,8 +95,16 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
-    /* transition: 0.3s ease-in-out; */
+  /* this is an svg */
+    width: 15%;
+    padding: 10px 13px 10px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    /* have a gradient overlaying the svg*/
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    /* have a outer glow which is the same color as the linear-gradient */
+    box-shadow: 0 0 20px rgba(74, 47, 189, 0.5);
+    
 
 }
 
@@ -428,7 +436,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
-  border-radius: 50px;
+  border-radius: 60px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
@@ -475,6 +483,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
+  z-index: 1;
 }
 
 .nav-link#projects-tabs-tab-second {
@@ -485,6 +494,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
+  z-index: 1;
 }
 
 .proj-imgbx {
@@ -776,9 +786,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   backdrop-filter: blur(20px);
   background: linear-gradient(-45deg, rgb(230, 11, 135), rgb(51, 0, 255));
   border-radius: 50%; /* Make the gradient background look like a circle */
-
-  
+  padding: 10px;
 }
+
+/* .rotating-image-container .gradient-background::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  border-radius: inherit;
+  box-shadow: 0 0 100px rgba(11, 230, 84, 0.8), 0 0 20px rgba(51, 0, 255, 0.8);
+  transform: rotate(-45deg);
+  z-index: -1;
+} */
 
 .rotating-image-container .shadow {
   position: absolute;
