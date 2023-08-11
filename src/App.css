@@ -94,18 +94,45 @@ nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
-nav.navbar a.navbar-brand {
-  /* this is an svg */
-    width: 15%;
-    padding: 10px 13px 10px 15px;
-    border-radius: 10px;
-    transition: 0.3s ease-in-out;
-    /* have a gradient overlaying the svg*/
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    /* have a outer glow which is the same color as the linear-gradient */
-    box-shadow: 0 0 20px rgba(74, 47, 189, 0.5);
-    
 
+@media screen and (max-width: 767px){
+  nav.navbar.scrolled {
+    padding: 10px 10px;
+    background-color: #121212;
+  }
+}
+
+
+
+
+  nav.navbar a.navbar-brand {
+    /* this is an svg */
+      width: 18%;
+
+      padding: 10px 13px 10px 15px;
+      border-radius: 10px;
+      transition: 0.3s ease-in-out;
+      /* have a gradient overlaying the svg*/
+      background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+      /* have a outer glow which is the same color as the linear-gradient */
+      box-shadow: 0 0 20px rgba(74, 47, 189, 0.5);
+      
+  }
+
+@media screen and (max-width: 768px){
+  nav.navbar a.navbar-brand {
+    /* this is an svg */
+      width: 40%;
+
+      padding: 10px 13px 10px 15px;
+      border-radius: 10px;
+      transition: 0.3s ease-in-out;
+      /* have a gradient overlaying the svg*/
+      background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+      /* have a outer glow which is the same color as the linear-gradient */
+      box-shadow: 0 0 20px rgba(74, 47, 189, 0.5);
+      
+  }
 }
 
 /* .navbar-brand:hover{
@@ -257,6 +284,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 767px) {
+  .banner {
+    margin: 0px 5%;
+    padding: 260px 0 100px 0;
+    background-image: url('./assets/img/banner-bg.png');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+  
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -275,6 +314,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 20px;
   display: block;
 }
+@media (max-width: 767px) {
+  .banner h1 {
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 90px;
+    display: block;
+  }
+}
+  
+
+
 .banner p {
   color: #B8B8B8;
   font-size: 18px;
@@ -373,6 +425,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0 50px 50px 0;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .skill {
+    padding: 50px 0 50px 0;
+    position: relative;
+  }
+}
 .skill-bx {
   background: #151515;
   border-radius: 64px;
@@ -411,6 +469,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
+  margin: 0;
   position: relative;
   background-color: black;
 }
@@ -428,10 +487,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
   padding: 10px; /* Add padding to the description */
+  text-align: center;
+  width: 70%;
+  
 }
+
+@media screen and (max-width: 767px) {
+  .project p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 10px 40px;
+    width: auto;
+    padding: 10px; /* Add padding to the description */
+  }
+}
+  
+
 
 .project .nav.nav-pills {
   width: 72%;
@@ -440,6 +514,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
+@media screen and (max-width: 767px) {
+  .project .nav.nav-pills {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 60px;
+    background-color: rgb(255 255 255 / 10%);
+    overflow: hidden;
+  }
+}
+
 
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
@@ -464,6 +548,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   content: "";
   position: absolute;
   width: 0;
+  border-radius: auto;
   height: 100%;
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   top: 0;
@@ -482,7 +567,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
+  border-radius: 60px 0px 0px 60px;
   z-index: 1;
 }
 
@@ -493,7 +578,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px 0;
+  border-radius: 0 60px 60px 0;
   z-index: 1;
 }
 
@@ -502,8 +587,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 80px;
   overflow: hidden;
   margin-bottom: 24px;
-  
-  transform: translateX(10%);
+}
+
+@media screen and (max-width: 767px) {
+  .proj-imgbx {
+    width: auto;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    margin: 10px; /* Adjust the margin as needed */
+  }
 }
 
 .proj-imgbx::before {
@@ -511,17 +605,42 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   opacity: 0.85;
   position: absolute;
-  width: 80%;
+  width: 100%;
   border-radius: 80px;
   overflow: hidden;
   height: 0;
   transition: 0.4s ease-in-out;
 }
 
+@media screen and (max-width: 767px) {
+  .proj-imgbx::before {
+    content: "";
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    opacity: 0.85;
+    position: absolute;
+    width: 80%;
+    border-radius: 40px;
+    overflow: hidden;
+    height: 0;
+    transition: 0.4s ease-in-out;
+  }
+}
+
+
 .proj-imgbx:hover::before {
   height: 100%;
   border-radius: 80px;
 }
+@media screen and (max-width: 767px) {
+  .proj-imgbx:hover::before {
+    height: 100%;
+    border-radius: 40px;
+    width: 100%;
+    height: 40%;
+  }
+}
+  
+
 
 .proj-imgbx:hover {
   top: 50%;
@@ -529,27 +648,57 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .proj-imgbx img {
-  width: 80%;
+  width: 100%;
   height: auto;
   border-radius: 80px;
 }
+@media screen and (max-width: 767px) {
+  .proj-imgbx img {
+    height: auto;
+    border-radius: 40px;
+  }
+}
+  
+
+
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
   opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  .proj-imgbx:hover .proj-txtx {
+    top: 50%;
+    opacity: 1;
+    position: relative;
+  }
 }
 
 .project .proj-txtx {
   position: absolute;
   text-align: center;
   top: 65%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.5s ease-in-out;
   opacity: 0;
-  width: 80%; /* Reduce the width to keep the text within the image bubble */
+  width: 100%; /* Reduce the width to keep the text within the image bubble */
   max-width: 800px; /* Add a maximum width to prevent excessive stretching */
   padding: 10px; /* Add padding to the .proj-txtx */
 }
+@media screen and (max-width: 767px) {
+  .project .proj-txtx {
+
+    margin: 10px;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    width: 80%; /* Reduce the width to keep the text within the image bubble */
+    max-width: 800px; /* Add a maximum width to prevent excessive stretching */
+    padding: 10px; /* Add padding to the .proj-txtx */
+  }
+}
+  
+
 
 .project .proj-txtx h4 {
   font-size: 40px;
@@ -758,7 +907,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   transform-style: preserve-3d;
 }
-
+@media screen and (max-width: 767px) {
+  .rotating-image-container {
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    transform-style: preserve-3d;
+    margin-top: 50px;
+  }
+}
 .rotating-image-container::before {
   inset: 0.75rem;
   border-radius: inherit;
