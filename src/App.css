@@ -134,23 +134,6 @@ nav.navbar.scrolled {
       
   }
 }
-@media screen and (max-width: 768px){
-  nav.navbar.scrolled a.navbar-brand {
-    /* this is an svg */
-      width: 40%;
-      transform: translateX(-20%);
-      padding: 10px 13px 10px 15px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      transition: 0.3s ease-in-out;
-      /* have a gradient overlaying the svg*/
-      background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-      /* have a outer glow which is the same color as the linear-gradient */
-      box-shadow: 0 0 20px rgba(74, 47, 189, 0.5);
-      
-  }
-}
 
 /* .navbar-brand:hover{
     transform: scale(1.1);
