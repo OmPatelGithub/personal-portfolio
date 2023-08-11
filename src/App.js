@@ -14,7 +14,7 @@ import AnimatedMouseCursor from './Components/AnimCursor';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       
       <AnimatedCursor 
         style={{ zIndex: 2000 }}
@@ -40,8 +40,8 @@ function App() {
       />
       <NavBar />
       <Banner />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
       <Footer />
       {/* <JudyBanner /> */}

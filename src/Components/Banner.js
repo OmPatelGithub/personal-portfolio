@@ -4,8 +4,6 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import RotatingImage  from "./RotatingImage";
-import RotatingGrid from "./RotatingGrid";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -13,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(10);
   const [index, setIndex] = useState(1);
-  const toRotate = [ " a Student at UofT", " a Fullstack Developer", "an AI Developer" ];
+  const toRotate = [ " a Student", " a Software Developer"];
   const period = 1000;
 
   useEffect(() => {
@@ -60,19 +58,23 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""} >
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1 style={{ height: "120px" }}>{`Hi! I'm Om,`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Welcome to my portfolio website! I'm Om Patel, a Computer Science student at the University of Toronto, with a focus on full-stack development, machine learning, and software design. Through my projects and experiences, I aim to create innovative solutions that blend creativity and technical expertise. Let's explore the world of technology together and bring inspiring ideas to life. Feel free to connect with me and let's collaborate on exciting ventures!</p>
+                <h1 style={{ height: "130px" }}>{`Hi! I'm Om,`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>
+                    I'm a Computer Science student at the University of Toronto with a passion for full-stack development and machine learning. I have experience as a Software Consultant, Co-founder of a startup, and Software Engineering Intern, and I enjoy working on diverse technical projects. I am proficient in Java, Python, C#, JavaScript, and more, I strive to create innovative solutions that make a positive impact.
+                  </p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <div className="rotating-image-container">
-            <RotatingImage src={headerImg} alt="header-img" />
-            </div>
-
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                  <img src={headerImg} alt="Header Img"/>
+                </div>}
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>
