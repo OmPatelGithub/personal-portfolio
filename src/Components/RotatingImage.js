@@ -4,6 +4,7 @@ import { Translate } from "react-bootstrap-icons";
 
 
 const RotatingImage = ({ src, alt }) => {
+    const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     const containerRef = useRef(null);
   
     useEffect(() => {
@@ -51,9 +52,6 @@ const RotatingImage = ({ src, alt }) => {
             transition: "transform 300ms ease-out",
           }}
         >
-
-        
-          {/* Background Gradient */}
           <div
             className="gradient-background"
             style={{
@@ -79,18 +77,9 @@ const RotatingImage = ({ src, alt }) => {
               right: 0,
               bottom: 0,
               transform: "translateZ(-100px) scale(1.1)", /* Move the gradient behind the image */
-             
               borderRadius: "50%", /* Make the gradient background look like a circle */
-
             }}
           />    
-
-             
-
-    
-
-    
-
           <img
             src={src}
             alt={alt}
@@ -103,8 +92,7 @@ const RotatingImage = ({ src, alt }) => {
               zIndex: 10,
             }}
           />
-    
-  
+
         </div>
 
      

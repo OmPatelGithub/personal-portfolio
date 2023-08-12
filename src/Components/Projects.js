@@ -30,6 +30,9 @@ export const Projects = () => {
     },
   ];
 
+  const isSmallScreen = window.innerWidth <= 767;
+  console.log(isSmallScreen);
+
   return (
     <section className="project" id="project">
       <Container>
@@ -59,7 +62,7 @@ export const Projects = () => {
                           projects.slice(0, 1).map((project, index) => {
                             return (
                               <Col key={index} size={12}>
-                                <ProjectCard {...project}/>
+                                <ProjectCard {...project} isSmallScreen={isSmallScreen}/>
                               </Col>
                             )
                           })
@@ -72,7 +75,7 @@ export const Projects = () => {
                           projects.slice(1, 2).map((project, index) => {
                             return (
                               <Col key={index} size={12}>
-                                <ProjectCard {...project} />
+                                <ProjectCard {...project} isSmallScreen={isSmallScreen}/>
                               </Col>
                             )
                           })
@@ -85,7 +88,7 @@ export const Projects = () => {
                           projects.slice(2, 3).map((project, index) => {
                             return (
                               <Col key={index} size={12}>
-                                <ProjectCard {...project} />
+                                <ProjectCard {...project} isSmallScreen={isSmallScreen}/>
                               </Col>
                             )
                           })

@@ -152,6 +152,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
+    margin-top: ;
 }
 span.navbar-text {
     display: flex;
@@ -287,7 +288,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media screen and (max-width: 767px) {
   .banner {
     margin: 0px 5%;
-    padding: 260px 0 100px 0;
+    padding: 260px 0 20px 0;
     background-image: url('./assets/img/banner-bg.png');
     background-position: top center;
     background-size: cover;
@@ -516,7 +517,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 @media screen and (max-width: 767px) {
   .project .nav.nav-pills {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     border-radius: 60px;
     background-color: rgb(255 255 255 / 10%);
@@ -567,13 +568,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 60px 0px 0px 60px;
+  border-radius: 55px 0px 0px 60px;
   z-index: 1;
 }
 
 .nav-link#projects-tabs-tab-second {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 1;
 }
 
 .nav-link#projects-tabs-tab-third {
@@ -599,6 +601,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin: 10px; /* Adjust the margin as needed */
   }
 }
+
 
 .proj-imgbx::before {
   content: "";
@@ -653,7 +656,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media screen and (max-width: 767px) {
   .proj-imgbx img {
     width: 100%;
-    height: auto;
     border-radius: 40px;
   }
 }
@@ -820,7 +822,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 50px 0 50px 0;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
@@ -929,14 +931,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   transform-style: preserve-3d;
 }
-@media screen and (max-width: 767px) {
-  .rotating-image-container {
-    transition: transform 0.3s ease-in-out;
-    position: relative;
-    transform-style: preserve-3d;
-    margin-top: 50px;
-  }
-}
+
 .rotating-image-container::before {
   inset: 0.75rem;
   border-radius: inherit;
@@ -947,9 +942,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 0.5;
 }
 
-.rotating-image-container:hover {
-  transform: scale(1.01);
-}
+
 
 .rotating-image-container div {
   position: relative;
@@ -1019,4 +1012,82 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   backdrop-filter: blur(50px); /* Add a blur effect */
   border-radius: 50%; /* Make the gradient background look like a circle */
   margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .rotating-image-container{
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    transform-style: preserve-3d;
+    margin-top: 80px;
+    margin-right: 20px;
+    transform: scale(0.7) translateX(-22%);
+    left: 5%;
+  }
+  .rotating-image-container img {
+
+    width: 60px;
+    height: 60px;
+  }
+  .rotating-image-container .frosted {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+    margin-left: 5px;
+    
+    background-position: center;
+    background-size: 160%;
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(0, 0, 0, 0.932) 10%, /* Start with black at 0% */
+        rgba(255, 255, 255, 0.311) 60% /* Transition to semi-transparent white at 70% */
+      );
+    
+    backdrop-filter: blur(50px); /* Add a blur effect */
+    border-radius: 50%; /* Make the gradient background look like a circle */
+    margin-left: 10px;
+  }
+  .rotating-image-container .gradient-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(20px);
+    background: linear-gradient(-45deg, rgb(230, 11, 135), rgb(51, 0, 255));
+    border-radius: 50%; /* Make the gradient background look like a circle */
+    padding: 5px;
+  }
+  .rotating-image-container .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at center,
+      rgb(0, 0, 0) 20%, /* Start with black at 0% */
+      rgba(0, 0, 0, 0) 10% /* Transition to semi-transparent white at 70% */
+    );
+    opacity: 0.3;
+    inset: 0.5rem;
+    backdrop-filter: blur(1500px); /* Add a blur effect */
+    border-radius: 50%; /* Make the gradient background look like a circle */
+    margin-left: 5px;
+  }
+}
+
+.footerlogo{
+  width: 100%;
+  padding: 10px 13px 10px 15px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+  /* have a gradient overlaying the svg*/
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* have a outer glow which is the same color as the linear-gradient */
+  box-shadow: 0 0 20px rgba(74, 47, 189, 0.5);
 }
