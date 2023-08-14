@@ -39,7 +39,7 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           {/* Navbar.brand */}
-          <Navbar.Brand href="/"> 
+          <Navbar.Brand href="https://ompatelgithub.github.io/personal-portfolio/"> 
             <img src={newlogo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
