@@ -6,7 +6,7 @@ import { Translate } from "react-bootstrap-icons";
 const RotatingImage = ({ src, alt }) => {
     const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     const containerRef = useRef(null);
-  
+
     useEffect(() => {
       const container = containerRef.current;
   

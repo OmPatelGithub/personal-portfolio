@@ -59,7 +59,8 @@ export const NavBar = () => {
               {/* <HashLink to='src/assets/Files/CS_Software_Resume__2024_.pdf' target="_blank">
                 <button className="vvd "><span>My Resume</span></button>
               </HashLink> */}
-              <a href={process.env.PUBLIC_URL + "/CS_Software_Resume__2024_.pdf"} target="_blank" rel="noopener noreferrer">
+              {/* /CS_Software_Resume__2024_.pdf */}
+              <a href={process.env.PUBLIC_URL + ""} target="_blank" rel="noopener noreferrer">
                 <button className="vvd "><span>My Resume</span></button>
               </a>
             </span>
