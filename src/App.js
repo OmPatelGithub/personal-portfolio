@@ -40,8 +40,9 @@ function App() {
       />
       <NavBar />
       <Banner />
-      <Projects />
+      
       <Skills />
+      <Projects />
       <Contact />
       <Footer />
       {/* <JudyBanner /> */}
